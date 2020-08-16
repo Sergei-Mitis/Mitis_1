@@ -19,12 +19,12 @@ LICENSE: [MIT](./license.md)
 3030. [Файл .gitignore](./10_gitignore.md)
 888. [Заключение](./11_END.md)
 
+---
 
-
+[Далее >>>](./02_introduction.md)
 ---
 
 GIT logo by Jason Long - http://git-scm.com/downloads/logos
 license:[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 
 ---
-[Далее >>>](./02_introduction.md)
