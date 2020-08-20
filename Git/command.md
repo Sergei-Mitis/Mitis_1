@@ -29,4 +29,4 @@ git push origin feature_n
 ```
 
 ---
-[<<< Перейти к содержанию](./01_readme.md) / [Далее >>>](./09_branch.md)
+[<<< Перейти к содержанию](./readme.md) / [Далее >>>](./09_branch.md)

@@ -19,4 +19,4 @@
 [<span style="border-bottom: 2px dashed red;">Полезные команды</span>](./command.md)
 
 ---
-[<<< Перейти к содержанию](./01_readme.md) / [Далее >>>](./10_gitignore.md)
+[<<< Перейти к содержанию](./readme.md) / [Далее >>>](./10_gitignore.md)

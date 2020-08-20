@@ -14,4 +14,4 @@ git config --global user.email"example@email.com"
 
 ---
 
-[<<< Перейти к содержанию](./01_readme.md) / [Далее >>>](./04_begin_use.md)
+[<<< Перейти к содержанию](./readme.md) / [Далее >>>](./04_begin_use.md)
