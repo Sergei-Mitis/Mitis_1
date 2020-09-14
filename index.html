@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>БыстроНовости</title>
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-	<header>
-		<h1>Новости</h1>
-	</header>
-	<section class="news">
-		<article class="One">
-			<a href="https://lenta.ru/news/2020/08/29/chip/">
-				<h2>Илон Маск вживил чип в мозг свиньи</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Василий Петров</a> 29 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/sgjt2tGk9PU">
-			<p>
-				Американский предприниматель Илон Маск поделился успехом в создании мозгового чипа. Об этом он заявил в ходе пресс-конференции в штаб-квартире компании Neuralink. Устройство позволяло ученым следить за активностью осязательных центров мозга животного по беспроводному каналу связи, отслеживая то, чего касается свинья своим пятачком.	
-			</p>
-		</article>
-		<article class="Two">
-			<a href="https://lenta.ru/news/2020/08/29/chipchip/">
-				<h2>Раскрыта стоимость чипирования людей</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Антон Рогов</a> 28 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/jXd2FSvcRr8">
-			<p>
-				Американский изобретатель и предприниматель Илон Маск раскрыл примерную стоимость чипирования людей. Об этом он рассказал в ходе презентации устройства для вживления в человеческий череп.	
-			</p>
-		</article>
-		<article>
-			<a href="https://lenta.ru/news/2020/08/29/nomer/">
-				<h2>Найден способ определить скрытый номер звонящего</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Александр Петров</a> 30 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/E7FYfLSy9KM">
-			<p>
-				Найден способ определить, кто звонит со скрытого номера, нужно подключить платную услугу «Суперопределитель номера» или заказать детализацию звонков. Такие услуги есть у всех операторов связи. Об этом агентству рассказал директор компании «Интеллектуальный резерв» Павел Мясоедов.	
-			</p>
-		</article>
-		<article>
-			<a href="https://lenta.ru/news/2020/08/28/quasars/">
-				<h2>В космосе обнаружили редкие экзотические объекты</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Андрей Иванов</a> 27 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/E0AHdsENmDg">
-			<p>
-				Международная группа астрономов открыла несколько пар сливающихся галактик, содержащих сверхмассивные черные дыры и порождающих двойные квазары. Об обнаружении редких космических объектов сообщается в статье, опубликованной в The Astrophysical Journal.	
-			</p>
-		</article>
-		<article>
-			<a href="https://lenta.ru/news/2020/08/26/ppk-20/">
-				<h2>Представлен пистолет-пулемет Калашникова</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Петр Васильев</a> 29 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/qDWiLMxCKCI">
-			<p>
-				Концерн «Калашников» представил пистолет-пулемет Калашникова (ППК-20). Новинка создана на базе оружия «Витязь-СН», сообщается на сайте проекта «Калашников Media».	
-			</p>
-		</article>
-		<article>
-			<a href="https://lenta.ru/news/2020/08/26/human/">
-				<h2>Антивитамины оказались спасением человечества</h2>
-			</a>
-			<div class="arcticle-meta">Опубликовал <a href="#">Вадим Сидоров</a> 28 августа 2020
-			</div>
-			<img src="https://source.unsplash.com/EZWTMjwAWls">
-			<p>
-				Ученые Геттингенского университета в Германии выяснили, что антивитамины оказались подходящей заменой антибиотикам, к которым у многих патогенных бактерий развивается устойчивость. Эти препараты могут послужить спасением от резистентных микроорганизмов, например, золотистого стафилококка, которые угрожают человечеству неизлечимыми инфекциями.	
-			</p>
-		</article>
-	</section>
-	<footer>
-		<div class="links">
-			<a href="#">Вакансии</a>
-			<a href="#">Контакты</a>
-			<a href="#">О нас</a>
-			<a href="#">Реклама</a>
-		</div>
-		<div class="copyright">Copyright © БыстроНовости 2020</div>
-	</footer>
+    <div class="container">
+        <div class="row calc-row align-items-center">
+            <div class="col col-md-4 offset-md-4">
+                <div class="form-group">
+                    <div class="card" id="calc">
+                        <div class="card-body">
+                            <input class="form-control input-window" id="inputWindow" value="">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <div class="form-control" id="window_2"></div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline form-control" id="btn_clr">C</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_1">1</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_2">2</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_3">3</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_sum">+</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_4">4</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_5">5</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_6">6</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_def">-</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_7">7</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_8">8</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_9">9</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_multi">*</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control"
+                                        id="btn_pm">x<sup>2</sup></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_zero">0</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_root">√</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_divis">/</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_calc">=</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-outline-primary form-control" id="btn_dat">.</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
