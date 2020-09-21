@@ -1,155 +1,81 @@
-let lastOperand = 0;
-let operation = null;
-let window_2 = '';
+let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
+let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+let answerNumber  = Math.floor((minValue + maxValue) / 2);
+let orderNumber = 1;
+let gameRun = true;
+
+document.getElementById('btnRetry').addEventListener('click', function () {
+
+    orderNumber = 1;
+    
+    let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
+ let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+let answerNumber  = Math.floor((minValue + maxValue) / 2);
+const orderNumberField = document.getElementById('orderNumberField');
+const answerField = document.getElementById('answerField');
+
+orderNumberField.innerText = orderNumber;
+answerField.innerText = `Вы загадали число ${answerNumber }?`;
+
+    gameRun = true;
+    answerNumber = 0;
+    
+})
+
+const orderNumberField = document.getElementById('orderNumberField');
+const answerField = document.getElementById('answerField');
+
+orderNumberField.innerText = orderNumber;
+answerField.innerText = `Вы загадали число ${answerNumber }?`;
 
 
-const inputWindow = document.getElementById('inputWindow');
-inputWindow.value = '0';
 
-document.getElementById('btn_1').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '1';
-})
-document.getElementById('btn_2').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '2';
-})
-document.getElementById('btn_3').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '3';
-})
-document.getElementById('btn_4').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '4';
-})
-document.getElementById('btn_5').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '5';
-})
-document.getElementById('btn_6').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '6';
-})
-document.getElementById('btn_7').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '7';
-})
-document.getElementById('btn_8').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '8';
-})
-document.getElementById('btn_9').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '9';
-})
-document.getElementById('btn_zero').addEventListener('click', function () {
-    if (inputWindow.value.slice(0) == 0) {
-        inputWindow.value = inputWindow.value.substr(1);
-    }
-    inputWindow.value += '0';
-})
-document.getElementById('btn_sum').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "+";
-    inputWindow.value = '';
+document.getElementById('btnOver').addEventListener('click', function () {
+    if (gameRun){
+        if (minValue === maxValue){
+            const phraseRandom = Math.round( Math.random());
+            const answerPhrase = (phraseRandom === 1) ?
+                `Вы загадали неправильное число!\n\u{1F914}` :
+                `Я сдаюсь..\n\u{1F92F}`;
 
-})
-document.getElementById('btn_def').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "-";
-    inputWindow.value = '';
-
-})
-document.getElementById('btn_multi').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "*";
-    inputWindow.value = '';
-
-})
-document.getElementById('btn_divis').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "/";
-    inputWindow.value = '';
-
-})
-document.getElementById('btn_dat').addEventListener('click', function () {
-    inputWindow.value += '.';
-
-})
-document.getElementById('btn_pm').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "pm";
-    inputWindow.value = '';
-
-})
-document.getElementById('btn_root').addEventListener('click', function () {
-    lastOperand = parseFloat(inputWindow.value);
-    operation = "root";
-    inputWindow.value = '';
-
-})
-document.getElementById('btn_calc').addEventListener('click', function () {
-    if (operation === '+') {
-        result = lastOperand + parseFloat(inputWindow.value);
+            answerField.innerText = answerPhrase;
+            gameRun = false;
+        } else {
+            minValue = answerNumber  + 1;
+            answerNumber  = Math.floor((minValue + maxValue) / 2);
+            orderNumber++;
+            orderNumberField.innerText = orderNumber;
+            answerField.innerText = `Вы загадали число ${answerNumber }?`;
+        }
     }
-    if (operation === '-') {
-        result = lastOperand - parseFloat(inputWindow.value);
-    }
-    if (operation === '*') {
-        result = lastOperand * parseFloat(inputWindow.value);
-    }
-    if (operation === '/') {
-        result = lastOperand / parseFloat(inputWindow.value);
-    }
-    window_2 = lastOperand + operation + inputWindow.value + '=' + result;
-    document.getElementById("window_2").innerHTML = window_2;
-    operation = null;
-    lastOperand = 0;
-    inputWindow.value = result;
 })
-document.getElementById('btn_pm').addEventListener('click', function () {
-    if (operation === 'pm') {
-        const result = lastOperand * lastOperand;;
-        window_2 = lastOperand + "<sup>2</sup>" + ' = ' + result;
-        document.getElementById("window_2").innerHTML = window_2;
-        operation = null;
-        lastOperand = 0;
-        inputWindow.value = result;
-    }
 
-})
-document.getElementById('btn_root').addEventListener('click', function () {
-    if (operation === 'root') {
-        const result = Math.sqrt(lastOperand);
-        window_2 = "√" + lastOperand + ' = ' + result;
-        document.getElementById("window_2").innerHTML = window_2;
-        operation = null;
-        lastOperand = 0;
-        inputWindow.value = result;
+document.getElementById('btnLess').addEventListener('click', function () {
+    if (gameRun){
+        if (minValue === maxValue){
+            const phraseRandom = Math.round( Math.random());
+            const answerPhrase = (phraseRandom === 1) ?
+                `Вы загадали неправильное число!\n\u{1F914}` :
+                `Я сдаюсь..\n\u{1F92F}`;
+
+            answerField.innerText = answerPhrase;
+            gameRun = false;
+        } else {
+            maxValue = answerNumber  - 1;
+            answerNumber  = Math.floor((minValue + maxValue) / 2);
+            orderNumber++;
+            orderNumberField.innerText = orderNumber;
+            answerField.innerText = `Вы загадали число ${answerNumber }?`;
+        }
     }
-
 })
-document.getElementById('btn_clr').addEventListener('click', function () {
-    lastOperand = 0;
-    operation = null;
-    inputWindow.value = '0';
 
+document.getElementById('btnEqual').addEventListener('click', function () {
+    if (gameRun){
+        answerField.innerText = `Я всегда угадываю\n\u{1F60E}`
+        gameRun = false;
+    }
 })
+
