@@ -50,20 +50,52 @@ const personGenerator = {
             "id_10": "Алина"
         }
     }`,
-
-    firstNameFemaleJson: `{
+    patronJson: `{
         "count": 10,
         "list": {     
-            "id_1": "Татьяна",
-            "id_2": "Дарья",
-            "id_3": "Мария",
-            "id_4": "Оксана",
-            "id_5": "Ирина",
-            "id_6": "Наталья",
-            "id_7": "Светлана",
-            "id_8": "Екатерина",
-            "id_9": "Елена",
-            "id_10": "Алина"
+            "id_1": "Вениаминов",
+            "id_2": "Спиридонов",
+            "id_3": "Фёдоров",
+            "id_4": "Ярославов",
+            "id_5": "Эдуардов",
+            "id_6": "Петров",
+            "id_7": "Павлов",
+            "id_8": "Михаилов",
+            "id_9": "Львов",
+            "id_10": "Елисеев"
+        }
+    }`,
+    profMaleJson: `{
+        "count": 3,
+        "list": {     
+            "id_1": "Сварщик",
+            "id_2": "Каменщик",
+            "id_3": "Электрик"
+        }
+    }`,
+    profFemaleJson: `{
+        "count": 3,
+        "list": {     
+            "id_1": "Медсестра",
+            "id_2": "Стюардесса",
+            "id_3": "Швея"
+        }
+    }`,
+    monthJson: `{  
+        "count": 12,
+        "list": {
+            "id_1": "Января",
+            "id_2": "Февраля",
+            "id_3": "Марта",
+            "id_4": "Апреля",
+            "id_5": "Майя",
+            "id_6": "Июня",
+            "id_7": "Июля",
+            "id_8": "Августа",
+            "id_9": "Сентября",
+            "id_10": "Октября",
+            "id_11": "Ноября",
+            "id_12": "Декабря"
         }
     }`,
 
@@ -81,24 +113,49 @@ const personGenerator = {
         return obj.list[prop];
     },
 
-    randomFirstName: function() {
+    randomFirstNameMale: function() {
 
         return this.randomValue(this.firstNameMaleJson);
 
     },
 
+    randomFirstNameFemale: function() {
 
+        return this.randomValue(this.firstNameFemaleJson);
+
+    },
      randomSurname: function() {
 
         return this.randomValue(this.surnameJson);
 
     },
+    randomPatronFemale: function() {
 
-    randomDate: function() {
-
-        return this.randomValue(this.surnameJson);
+        return this.randomValue(this.patronJson);
 
     },
+    randomPatronMale: function() {
+
+        return this.randomValue(this.patronJson);
+
+    },
+    randomProfFemale: function() {
+
+        return this.randomValue(this.profFemaleJson);
+
+    },
+    randomProfMale: function() {
+
+        return this.randomValue(this.profMaleJson);
+
+    },
+    randomMonth: function() {
+
+        return this.randomValue(this.monthJson);
+
+    },
+
+
     randomGender: function() {
         let male = this.randomIntNumber(1, 0);
         if (male == 1) {
@@ -112,10 +169,20 @@ const personGenerator = {
     getPerson: function () {
         this.person = {};
         this.person.gender = this.randomGender();
-        this.person.firstName = this.randomFirstName();
         this.person.surnaname = this.randomSurname();
+        if (this.person.gender == this.GENDER_MALE) {
+            this.person.firstName = this.randomFirstNameMale();
+            this.person.patron = this.randomPatronMale() + "ич";
+            this.person.prof = this.randomProfMale();
+        }
+        else {
+            this.person.surnaname += "a";
+            this.person.patron = this.randomPatronFemale() + "на";
+            this.person.firstName = this.randomFirstNameFemale();
+            this.person.prof = this.randomProfFemale();
+        }
         this.person.yar = this.randomIntNumber(1920, 2005);
-        this.person.month = this.randomIntNumber(1, 12);
+        this.person.month = this.randomMonth();
         this.person.day = this.randomIntNumber(1, 28);
         return this.person;
     }
