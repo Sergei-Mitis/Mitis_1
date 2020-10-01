@@ -66,19 +66,21 @@ const personGenerator = {
         }
     }`,
     profMaleJson: `{
-        "count": 3,
+        "count": 4,
         "list": {     
             "id_1": "Сварщик",
             "id_2": "Каменщик",
-            "id_3": "Электрик"
+            "id_3": "Электрик",
+            "id_4": "Летчик"
         }
     }`,
     profFemaleJson: `{
-        "count": 3,
+        "count": 4,
         "list": {     
             "id_1": "Медсестра",
             "id_2": "Стюардесса",
-            "id_3": "Швея"
+            "id_3": "Швея",
+            "id_4": "Воспитатель"
         }
     }`,
     monthJson: `{  
@@ -187,3 +189,27 @@ const personGenerator = {
         return this.person;
     }
 };
+
+document.getElementById('btnСlean').addEventListener('click', function () {
+    document.getElementById('surnameOutput').innerText = "-";
+    document.getElementById('firstNameOutput').innerText = "-";
+    document.getElementById('patronOutput').innerText = "-";
+    document.getElementById('genderOutput').innerText = "-";
+    document.getElementById('birthDayOutput').innerText = "-";
+    document.getElementById('birthMonthOutput').innerText = "-";
+    document.getElementById('birthYearOutput').innerText = "-";
+    document.getElementById('profOutput').innerText = "-";
+})
+
+document.getElementById('btnStart').addEventListener('click', function () {
+    const initPerson = personGenerator.getPerson();
+    document.getElementById('firstNameOutput').innerText = initPerson.firstName;
+    document.getElementById('surnameOutput').innerText = initPerson.surnaname;
+    document.getElementById('patronOutput').innerText = initPerson.patron;
+    document.getElementById('birthYearOutput').innerText =  initPerson.yar;
+    document.getElementById('birthDayOutput').innerText =  initPerson.day;
+    document.getElementById('birthMonthOutput').innerText =  initPerson.month;
+    document.getElementById('genderOutput').innerText =  initPerson.gender;
+    document.getElementById('profOutput').innerText = initPerson.prof;
+    
+})
