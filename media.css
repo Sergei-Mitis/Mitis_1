@@ -34,7 +34,10 @@
     }
 
     .vk_1 {
-        margin-right: -382px;
-        
+        margin-right: -382px;  
+    }
+
+    .section {
+        width: 992px;
     }
 } 
