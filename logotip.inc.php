@@ -1,5 +1,5 @@
     
                 <div class="logotip"> 
-                <img src="img/1.png" width="600" height="800" alt="photo">
+                <img src="img/1.png" width="350" height="500" alt="photo">
                 </div>                                                 
         

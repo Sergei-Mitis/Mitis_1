@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Practice </title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     
@@ -12,12 +12,12 @@
 
         <div class="header">     
                <?php include 'logo.inc.php' ?>         
-               <?php include 'menu.inc.php' ?>	
+               <?php include 'menu.inc.php' ?>	   
         </div>       
      
         <div class="about_me">
          
-          <h1>  <?php  echo $p  ?> </h1>
+        <div class="Hello"> <h1>  <?php  echo $p  ?> </h1></div>
 
             <div class="data">
                 <div class="myImg">
@@ -25,16 +25,16 @@
                 </div>
 
                 <div class="fullname">
-                    <p class="myname"> Меня зовут 
+                    <h1 class="myname"> Меня зовут 
                     <?php echo $name, ' ', $surname . '<br>'; 
                           echo 'город', ' ', $city; ?>                                      
-                    </p> 
+                    </h1> 
            
                     <p> Мне
                     <?php  echo $age;   ?>          
-                    лет </p>
-                    <p> Мы научились создавать переменные  </p>
-                    <p> Изучили простые операции с ними </p>
+                    года </p>
+                    <p> В этом модуле мы научились: </p>
+                    <?php include 'aboutme.inc.php' ?>
                 </div>
             </div>
 
@@ -57,15 +57,15 @@
 
             <div class="article">
                 <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Recusandae asperiores ducimus dolore explicabo. Animi est amet quibusdam molestias! 
-                    Minus laudantium sapiente dignissimos possimus natus cumque delectus sed, accusantium totam quia?
+                WhatsApp +7906835671<br>
+                e-mail: sergius-p@mail.ru <br>
+                <a href="https://www.facebook.com/Sergei.Prohorov">www.facebook.com/Sergei.Prohorov</a>
+
                 </p>
             </div>
         </div>
-
             <?php include 'footer.inc.php' ?>
-
+            </div>
     </div>
 
 
